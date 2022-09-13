@@ -1,12 +1,13 @@
 import java.util.Comparator;
 
+
 public class PersonNameComparator implements Comparator<Person> {
     @Override
     public int compare(Person o1, Person o2) {
-        if  (o1.getSurname().length() < o2.getSurname().length()) {
+        if  (o1.getSurname().split("[\\s]+").length < o2.getSurname().split("[\\s]+").length) {
             return 1;
         }
-        if  (o1.getSurname().length() > o2.getSurname().length()) {
+        if  (o1.getSurname().split("[\\s]+").length > o2.getSurname().split("[\\s]+").length) {
             return -1;
         }
 
@@ -18,7 +19,7 @@ public class PersonNameComparator implements Comparator<Person> {
         }
 
         return 0;
+
     }
 }
-
 

@@ -6,14 +6,16 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         List<Person> people = new ArrayList<>();
-        people.add(new Person("Сергей","Первый", 35));
-        people.add(new Person("Антон","Второй",27));
-        people.add(new Person("Петр","Третий-Пятый", 32));
-        people.add(new Person("Валерий","Четвертый",59));
-        Comparator NameComparator = new PersonNameComparator();
+        people.add(new Person("Сергей","Первый самый первый", 35));
+        people.add(new Person("Антон","Второй но не первый",45));
+        people.add(new Person("Петр","Третий пятый", 32));
+        people.add(new Person("Валерий","Четвертый раз и два",55));
+        Comparator<Person> NameComparator = new PersonNameComparator();
         System.out.println(people);
 
-        Collections.sort(people,NameComparator);
+        Collections.sort(people, NameComparator);
         System.out.println(people);
+
     }
 }
+
