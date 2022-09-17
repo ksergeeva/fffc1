@@ -11,9 +11,11 @@ public class Main {
         people.add(new Person("Антон","Второй но не первый",45));
         people.add(new Person("Петр","Третий пятый", 32));
         people.add(new Person("Валерий","Четвертый раз и два",55));
+        people.add(new Person("Александр", "Шестой перед седьмым", 17));
+        people.add(new Person("Павел", "Седьмой а мог быть восьмой", 14));
         System.out.println(people);
-
-        
+        Predicate<Person> condition = Person -> Person.getAge() < 18;
+        people.removeIf(condition);
 
 
         people.sort((o1, o2) -> {
