@@ -25,7 +25,7 @@ public class Person {
         this.surname = surname;
     }
 
-    public int setAge() {
+    public int getAge() {
         return age;
     }
 
